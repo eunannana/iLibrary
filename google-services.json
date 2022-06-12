@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486657836022",
+    "project_id": "ilibrary-bb51e",
+    "storage_bucket": "ilibrary-bb51e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486657836022:android:6d86a1356c615b5c32fdd7",
+        "android_client_info": {
+          "package_name": "com.example.ilibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486657836022-b368va90mcgrvaprosh0np4c611mu2vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6cyIcw31CY1dBbzpBHsKh4VReo7LbfH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486657836022-b368va90mcgrvaprosh0np4c611mu2vb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
