@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/librarian"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#59C3CA"
+    android:background="#B1CFD1"
     tools:context=".librarian_login">
 
     <TextView
@@ -13,13 +14,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="LIBRARIAN LOGIN"
+        android:textColor="#1A373C"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -28,6 +30,8 @@
         android:ems="10"
         android:hint="Enter your librarian ID "
         android:inputType="textPersonName"
+        android:textColor="#1A373C"
+        android:textColorHint="#991A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -40,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="librarian ID"
+        android:textColor="#1A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
@@ -64,6 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="password"
+        android:textColor="#1A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
@@ -78,6 +84,8 @@
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPassword"
+        android:textColor="#1A373C"
+        android:textColorHint="#991A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
