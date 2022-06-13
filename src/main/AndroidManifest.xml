@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
         <activity
-            android:name=".ManageMember"
-            android:exported="false" />
-        <activity
             android:name=".Row_Member"
             android:exported="false" />
         <activity

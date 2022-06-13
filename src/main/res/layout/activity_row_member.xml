@@ -16,13 +16,22 @@
             android:text="iLibrary Member List"
             android:textSize="14pt" />
 
-        <ListView
-            android:id="@+id/memberList"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/ID_member"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:divider="@color/black"
-            android:dividerHeight="1dp" />
+            android:dividerHeight="1dp"
+            android:text="name" />
+
 
 </LinearLayout>
 
