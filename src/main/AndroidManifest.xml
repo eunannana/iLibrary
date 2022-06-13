@@ -14,16 +14,16 @@
             android:exported="false" />
         <activity
             android:name=".MemberHomepage"
-            android:exported="false" />
+            android:parentActivityName=".member_login" />
         <activity
             android:name=".LibrarianHomepage"
-            android:exported="false" />
+            android:parentActivityName=".librarian_login" />
         <activity
             android:name=".librarian_login"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".member_login"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
