@@ -6,9 +6,15 @@
         android:allowBackup="true"
         android:icon="@drawable/applogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
+        <activity
+            android:name=".member_homepage"
+            android:exported="false" />
+        <activity
+            android:name=".LibrarianHomepage"
+            android:exported="false" />
         <activity
             android:name=".librarian_login"
             android:exported="false" />
