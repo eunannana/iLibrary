@@ -22,10 +22,10 @@ public class librarian_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_librarian_login);
 
-        librarian_login = findViewById(R.id.login_librarian_button);
-
         librarian_id = findViewById(R.id.librarianID);
         librarian_pass = findViewById(R.id.librarianPass);
+
+        librarian_login = findViewById(R.id.login_librarian_button);
 
         librarian_login.setOnClickListener(new View.OnClickListener() {
             @Override

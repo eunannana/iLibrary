@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
         <activity
+            android:name=".AddBook"
+            android:exported="false" />
+        <activity
+            android:name=".AddMember"
+            android:exported="false" />
+        <activity
             android:name=".Row_Member"
             android:exported="false" />
         <activity
