@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B1CFD1"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="358dp"
+        android:layout_height="679dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bookPicture"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="20dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/BookAuthor"
+            android:layout_width="128dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/BookSubject"
+            android:layout_alignStart="@+id/BookSubject"
+            android:layout_alignEnd="@+id/BookSubject"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="-2dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_editor_absoluteY="117dp" />
+
+        <TextView
+            android:id="@+id/BookSubject"
+            android:layout_width="125dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/BookName"
+            android:layout_alignStart="@+id/BookName"
+            android:layout_alignEnd="@+id/BookName"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="79dp" />
+
+        <TextView
+            android:id="@+id/BookName"
+            android:layout_width="125dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="49dp"
+            android:layout_toRightOf="@id/bookPicture"
+            android:text="TextView"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="37dp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

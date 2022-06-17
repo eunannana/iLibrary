@@ -26,6 +26,29 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="Add Book Picture"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="157dp"
+            android:layout_height="145dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/image" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="ID Book"
             android:textColor="#1A373C"
             android:textSize="20sp"
@@ -284,7 +307,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/btn_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
