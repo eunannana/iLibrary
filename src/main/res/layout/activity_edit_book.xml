@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".AddMember">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addBookPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditBook">
 
     <LinearLayout
-        android:id="@+id/addMemberPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#B1CFD1"
@@ -18,7 +17,7 @@ tools:context=".AddMember">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="iLibrary Member"
+            android:text="iLibrary Book"
             android:textAlignment="center"
             android:textColor="#1A373C"
             android:textSize="34sp"
@@ -27,7 +26,30 @@ tools:context=".AddMember">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="ID Member"
+            android:text="Add Book Picture"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="157dp"
+                android:layout_height="145dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ID Book"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -39,10 +61,10 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/IDmember"
+                android:id="@+id/IDbook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter ID Member"
+                android:hint="Enter ID Book"
                 android:inputType="number"
                 android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -50,7 +72,7 @@ tools:context=".AddMember">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Full Name"
+            android:text="Book Title"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -62,17 +84,17 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/nameMember"
+                android:id="@+id/titleBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Member Full Name"
+                android:hint="Enter Book Title"
                 android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Address"
+            android:text="ISBN"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -84,17 +106,39 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/addressMember"
+                android:id="@+id/ISBN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Member Address"
+                android:hint="Enter ISBN Book"
+                android:inputType="number"
                 android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Birthday Date"
+            android:text="Subject"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Author"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -106,60 +150,20 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/birthdayMember"
+                android:id="@+id/authorBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Enter Member Birthday Date"
-                android:inputType="date"
+                android:hint="Enter Book Author"
                 android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Gender"
-            android:textColor="#1A373C"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:checked="false"
-                    android:text="Male"
-                    android:textColor="#1A373C"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:checked="false"
-                    android:text="Female"
-                    android:textColor="#1A373C"
-                    android:textSize="16sp" />
-            </RadioGroup>
-        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Phone Number"
+            android:text="Publisher"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -171,18 +175,17 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/phoneMember"
+                android:id="@+id/publisherBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Member Phone Number"
-                android:inputType="phone"
+                android:hint="Enter Book Publisher"
                 android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="E-mail"
+            android:text="Publish Year"
             android:textColor="#1A373C"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -194,11 +197,99 @@ tools:context=".AddMember">
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/emailMember"
+                android:id="@+id/yearBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Member E-mail Address"
-                android:inputType="textWebEmailAddress"
+                android:hint="Enter Book Publish Year"
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Book Stock"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <EditText
+                android:id="@+id/stockBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Book Stock"
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Book Language"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Physical Description"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <EditText
+                android:id="@+id/descBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Pysichal Book Description"
+                android:textColor="#0B4E61"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Book Summary"
+            android:textColor="#1A373C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <EditText
+                android:id="@+id/summaryBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Book Summary"
                 android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -231,7 +322,7 @@ tools:context=".AddMember">
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#0B4E61"
-            android:text="Add Member"
+            android:text="Update Book"
             android:textColor="#B1CFD1" />
 
     </LinearLayout>

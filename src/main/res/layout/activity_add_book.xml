@@ -65,7 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter ID Book"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -86,7 +87,8 @@
                 android:id="@+id/titleBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Book Title" />
+                android:hint="Enter Book Title"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -108,7 +110,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter ISBN Book"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -152,7 +155,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Enter Book Author" />
+                android:hint="Enter Book Author"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -174,7 +178,8 @@
                 android:id="@+id/publisherBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Book Publisher" />
+                android:hint="Enter Book Publisher"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -196,7 +201,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Book Publish Year"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -218,7 +224,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Book Stock"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -260,7 +267,8 @@
                 android:id="@+id/descBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Pysichal Book Description" />
+                android:hint="Enter Pysichal Book Description"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -281,7 +289,8 @@
                 android:id="@+id/summaryBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Book Summary" />
+                android:hint="Enter Book Summary"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -303,7 +312,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Librarian ID"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="#0B4E61"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -311,7 +321,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Add Book" />
+            android:backgroundTint="#0B4E61"
+            android:text="Add Book"
+            android:textColor="#B1CFD1" />
 
     </LinearLayout>
 </ScrollView>

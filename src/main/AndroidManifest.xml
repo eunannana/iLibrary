@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
         <activity
+            android:name=".EditBook"
+            android:exported="false" />
+        <activity
+            android:name=".EditMember"
+            android:exported="false" />
+        <activity
             android:name=".DetailBook"
             android:parentActivityName=".LibrarianHomepage" />
         <activity
