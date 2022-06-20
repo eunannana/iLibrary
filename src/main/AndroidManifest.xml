@@ -10,37 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
         <activity
-            android:name=".EditBook"
+            android:name=".librarian.BookList"
             android:exported="false" />
         <activity
-            android:name=".EditMember"
+            android:name=".librarian.ManageMember"
+            android:exported="false" />
+        <activity
+            android:name=".librarian.ManageBook"
             android:exported="false" />
         <activity
             android:name=".DetailBook"
-            android:parentActivityName=".LibrarianHomepage" />
+            android:parentActivityName=".librarian.LibrarianHomepage" />
         <activity
-            android:name=".ReservationBook"
+            android:name=".member.ReservationBook"
             android:exported="false" />
         <activity
-            android:name=".AddBook"
-            android:parentActivityName=".LibrarianHomepage" />
+            android:name=".member.MemberHomepage"
+            android:parentActivityName=".member.member_login" />
         <activity
-            android:name=".AddMember"
-            android:parentActivityName=".LibrarianHomepage" />
+            android:name=".librarian.LibrarianHomepage"
+            android:parentActivityName=".librarian.librarian_login" />
         <activity
-            android:name=".Row_Member"
-            android:exported="false" />
-        <activity
-            android:name=".MemberHomepage"
-            android:parentActivityName=".member_login" />
-        <activity
-            android:name=".LibrarianHomepage"
-            android:parentActivityName=".librarian_login" />
-        <activity
-            android:name=".librarian_login"
+            android:name=".librarian.librarian_login"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".member_login"
+            android:name=".member.member_login"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"

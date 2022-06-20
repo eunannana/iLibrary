@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B1CFD1"
-    tools:context=".librarian_login">
+    tools:context=".librarian.librarian_login">
 
     <TextView
         android:id="@+id/textView2"
@@ -26,19 +26,22 @@
 
     <EditText
         android:id="@+id/librarianID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/box"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Enter your librarian ID "
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:padding="10dp"
         android:textColor="#1A373C"
         android:textColorHint="#991A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <TextView
         android:id="@+id/textView3"
@@ -46,18 +49,21 @@
         android:layout_height="wrap_content"
         android:text="librarian ID"
         android:textColor="#1A373C"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <Button
         android:id="@+id/login_librarian_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#1A373C"
         android:text="LOGIN"
+        android:textColor="#B1CFD1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -71,28 +77,32 @@
         android:layout_height="wrap_content"
         android:text="password"
         android:textColor="#1A373C"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.658" />
 
     <EditText
         android:id="@+id/librarianPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@drawable/box"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPassword"
+        android:padding="10dp"
         android:textColor="#1A373C"
         android:textColorHint="#991A373C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <ImageView
         android:id="@+id/imageView2"

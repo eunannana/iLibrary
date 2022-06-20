@@ -1,8 +1,10 @@
-package com.example.ilibrary;
+package com.example.ilibrary.member;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ilibrary.R;
 
 public class ReservationBook extends AppCompatActivity {
 

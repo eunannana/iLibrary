@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B1CFD1"
-    tools:context=".MemberHomepage">
+    tools:context=".member.MemberHomepage">
 
     <TextView
         android:id="@+id/textView14"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgMember"
         android:layout_width="125dp"
         android:layout_height="125dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
         app:srcCompat="@drawable/book" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/BookManage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.59" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgBook"
         android:layout_width="125dp"
         android:layout_height="125dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -7,16 +7,45 @@
     android:background="#B1CFD1"
     app:cardElevation="15dp">
 
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="303dp"
+        android:layout_height="44dp"
+        android:background="#A3F4EEEE"
+        android:ems="10"
+        android:hint="    Search"
+        android:inputType="textPersonName"
+        android:textColorHint="#0B2522"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/search" />
+
     <RelativeLayout
-        android:layout_width="358dp"
-        android:layout_height="679dp"
+        android:layout_width="370dp"
+        android:layout_height="637dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855">
 
         <ImageView
             android:id="@+id/bookPicture"

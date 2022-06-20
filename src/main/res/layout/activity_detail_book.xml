@@ -38,7 +38,7 @@ tools:context=".DetailBook">
         app:boxBackgroundMode="outline">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/imageBook"
             android:layout_width="157dp"
             android:layout_height="145dp"
             android:background="#00FFFFFF"
