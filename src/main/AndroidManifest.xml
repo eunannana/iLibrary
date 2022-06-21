@@ -9,6 +9,8 @@
         android:roundIcon="@drawable/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
+        <activity android:name=".librarian.MemberList"
+            android:exported="false"/>
         <activity
             android:name=".librarian.BookList"
             android:exported="false" />

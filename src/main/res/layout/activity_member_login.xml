@@ -95,7 +95,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Enter your password"
-        android:inputType="textPassword"
+        android:inputType="numberPassword"
         android:padding="10dp"
         android:textColor="#1A373C"
         android:textColorHint="#991A373C"

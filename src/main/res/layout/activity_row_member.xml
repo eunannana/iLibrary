@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#B1CFD1"
-        tools:context=".Row_Member">
+       >
 
         <TextView
             android:id="@+id/textView"

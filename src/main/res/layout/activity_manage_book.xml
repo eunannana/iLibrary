@@ -156,8 +156,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Book Shelf Code"
-                android:inputType="number"
-                android:textColor="#0B4E61"/>
+                android:inputType="number|textPersonName"
+                android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView

@@ -1,11 +1,11 @@
 package com.example.ilibrary.model;
 
 public class book {
-    public String book_ID, book_ISBN, book_year_publish,book_stock, book_image,book_subject, book_shelf, book_author, book_publisher,  book_language, book_physical, book_summary;
+    public String book_ID, book_ISBN, book_year_publish,book_stock, book_image,book_subject, book_shelf, book_author, book_publisher, book_physical, book_summary;
     public book(){
 
     }
-    public book(String book_image, String book_ID, String book_ISBN, String book_subject, String book_shelf, String book_author, String book_publisher, String book_year_publish, String book_stock, String book_language, String book_physical, String book_summary ){
+    public book(String book_image, String book_ID, String book_ISBN, String book_subject, String book_shelf, String book_author, String book_publisher, String book_year_publish, String book_stock, String book_physical, String book_summary ){
         this.book_image = book_image;
         this.book_ID = book_ID;
         this.book_ISBN = book_ISBN;
@@ -15,7 +15,6 @@ public class book {
         this.book_publisher = book_publisher;
         this.book_year_publish = book_year_publish;
         this.book_stock = book_stock;
-        this.book_language = book_language;
         this.book_physical = book_physical;
         this.book_summary = book_summary;
     }
@@ -80,13 +79,6 @@ public class book {
     }
     public void setBook_stock(String book_stock){
         this.book_stock = book_stock;
-    }
-
-    public String getBook_language(){
-        return book_language;
-    }
-    public void setBook_language(String book_language){
-        this.book_language = book_language;
     }
 
     public String getBook_physical(){

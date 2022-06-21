@@ -32,16 +32,16 @@ public class LibrarianHomepage extends AppCompatActivity {
         {
             @Override
             public void onClick(View view){
-                Intent addMember = new Intent(getApplicationContext(), ManageMember.class);
-                startActivity(addMember);
+                Intent manageMember = new Intent(getApplicationContext(), MemberList.class);
+                startActivity(manageMember);
             }
         });
         imageMember.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view){
-                Intent addMember = new Intent(getApplicationContext(), ManageMember.class);
-                startActivity(addMember);
+                Intent manageMember = new Intent(getApplicationContext(), MemberList.class);
+                startActivity(manageMember);
             }
         });
 
