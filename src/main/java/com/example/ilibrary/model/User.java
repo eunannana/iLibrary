@@ -5,21 +5,20 @@ import android.content.Context;
 import java.util.List;
 
 public class User {
-    private String l_ID, l_name, l_pass, m_ID, m_name, m_pass, m_gender, m_phone, m_email;
+    private String l_ID, l_name, l_pass, ID, name, address, phone, email;
     public User(){
 
     }
-    public User(String l_ID, String l_name, String l_pass, String m_ID, String m_name, String m_pass, String m_gender, String m_phone, String m_email)
+    public User(String l_ID, String l_name, String l_pass, String ID, String name, String address, String phone, String email)
     {
         this.l_ID = l_ID;
         this.l_name = l_name;
         this.l_pass = l_pass;
-        this.m_ID = m_ID;
-        this.m_name = m_name;
-        this.m_pass = m_pass;
-        this.m_gender = m_gender;
-        this.m_phone = m_phone;
-        this.m_email = m_email;
+        this.ID = ID;
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
     }
     public String getL_ID(){
         return l_ID;
@@ -45,22 +44,19 @@ public class User {
         this.l_pass = l_pass;
     }
 
-    public String getM_ID(){return m_ID;}
-    public void setM_ID(String m_ID){this.m_ID = m_ID;}
+    public String getID(){return ID;}
+    public void setID(String ID){this.ID = ID;}
 
-    public String getM_name(){return m_name;}
-    public void setM_name(String m_name){this.m_name = m_name;}
+    public String getName(){return name;}
+    public void setName(String name){this.name = name;}
 
-    public String getM_pass(){return m_pass;}
-    public void setM_pass(String m_pass){this.m_pass = m_pass;}
+    public String getAddress(){return address;}
+    public void setAddress(String address){this.address = address;}
 
-    public String getM_gender(){return m_gender;}
-    public void setM_gender(String m_gender){this.m_gender = m_gender;}
+    public String getPhone(){return phone;}
+    public void setPhone(String phone){this.phone = phone;}
 
-    public String getM_phone(){return m_phone;}
-    public void setM_phone(String m_phone){this.m_phone = m_phone;}
-
-    public String getM_email(){return m_email;}
-    public void setM_email(String m_email){this.m_email = m_email;}
+    public String getEmail(){return email;}
+    public void setEmail(String email){this.email = email;}
 }
 

@@ -97,9 +97,9 @@ public class ManageMember extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(ManageMember.this, "Successfullt Save Member Data", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(ManageMember.this, "Successfully Save Member Data", Toast.LENGTH_SHORT).show();
                                             progressDialog.dismiss();
-                                            Intent i = new Intent(ManageMember.this, member_login.class);
+                                            Intent i = new Intent(ManageMember.this, MemberList.class);
                                             startActivity(i);
                                         } else {
                                             progressDialog.dismiss();
@@ -112,7 +112,7 @@ public class ManageMember extends AppCompatActivity {
                         progressDialog.dismiss();
                         Toast.makeText(ManageMember.this, "Input a new ID", Toast.LENGTH_SHORT).show();
 
-                        Intent i = new Intent(ManageMember.this, member_login.class);
+                        Intent i = new Intent(ManageMember.this, ManageMember.class);
                         startActivity(i);
                     }
                 }

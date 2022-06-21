@@ -36,8 +36,8 @@ public class librarian_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_librarian_login);
 
-        librarian_id = findViewById(R.id.librarianID);
-        librarian_pass = findViewById(R.id.librarianPass);
+        librarian_id = findViewById(R.id.librarian_ID);
+        librarian_pass = findViewById(R.id.librarian_Pass);
 
         librarian_login = findViewById(R.id.login_librarian_button);
 
@@ -66,10 +66,10 @@ public class librarian_login extends AppCompatActivity {
             loadBar.setCanceledOnTouchOutside(false);
             loadBar.show();
 
-            AllowAccessAccount(librarianID, librarianpass);
+            validateLibrarianAcc(librarianID, librarianpass);
         }
     }
-    private void AllowAccessAccount(final String l_ID, final String l_pass){
+    private void validateLibrarianAcc(final String l_ID, final String l_pass){
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {

@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.100" />
 
     <EditText
-        android:id="@+id/librarianID"
+        android:id="@+id/librarian_ID"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@drawable/box"
@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.658" />
 
     <EditText
-        android:id="@+id/librarianPass"
+        android:id="@+id/librarian_Pass"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@drawable/box"
