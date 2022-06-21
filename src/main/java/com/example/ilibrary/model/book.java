@@ -1,13 +1,13 @@
 package com.example.ilibrary.model;
 
 public class book {
-    public String book_ID, book_ISBN, book_year_publish,book_stock, book_image,book_subject, book_shelf, book_author, book_publisher, book_physical, book_summary;
+    public String book_ID, book_title, book_ISBN, book_year_publish,book_stock, book_subject, book_shelf, book_author, book_publisher, book_physical, book_summary;
     public book(){
 
     }
-    public book(String book_image, String book_ID, String book_ISBN, String book_subject, String book_shelf, String book_author, String book_publisher, String book_year_publish, String book_stock, String book_physical, String book_summary ){
-        this.book_image = book_image;
+    public book( String book_ID, String book_title, String book_ISBN, String book_subject, String book_shelf, String book_author, String book_publisher, String book_year_publish, String book_stock, String book_physical, String book_summary ){
         this.book_ID = book_ID;
+        this.book_title = book_title;
         this.book_ISBN = book_ISBN;
         this.book_subject = book_subject;
         this.book_shelf = book_shelf;
@@ -19,12 +19,6 @@ public class book {
         this.book_summary = book_summary;
     }
 
-    public String getBook_image(){
-        return book_image;
-    }
-    public void setBook_image(String book_image){
-        this.book_image = book_image;
-    }
 
     public String getBook_ID(){
         return book_ID;
@@ -32,6 +26,9 @@ public class book {
     public void setBook_ID(String book_ID){
         this.book_ID = book_ID;
     }
+
+    public String getBook_title(){return book_title;}
+    public void setBook_title(String book_title){this.book_title = book_title;}
 
     public String getBook_ISBN(){
         return book_ISBN;
@@ -62,9 +59,7 @@ public class book {
         this.book_author = book_author;
     }
 
-    public String getBook_publisher(){
-        return book_publisher;
-    }
+    public String getBook_publisher(){ return book_publisher; }
     public void setBook_publisher(String book_publisher){
         this.book_publisher = book_publisher;
     }

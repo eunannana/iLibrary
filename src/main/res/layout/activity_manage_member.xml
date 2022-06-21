@@ -145,12 +145,12 @@
             app:boxBackgroundMode="outline" />
 
         <Button
-            android:id="@+id/save_book"
+            android:id="@+id/save_member_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#0B4E61"
-            android:text="Add Member"
+            android:text="SAVE MEMBER"
             android:textColor="#B1CFD1" />
 
     </LinearLayout>

@@ -13,13 +13,16 @@
             android:exported="false"/>
         <activity
             android:name=".librarian.BookList"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".librarian.LibrarianHomepage"/>
         <activity
             android:name=".librarian.ManageMember"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".librarian.MemberList"/>
         <activity
             android:name=".librarian.ManageBook"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".librarian.BookList"/>
         <activity
             android:name=".DetailBook"
             android:parentActivityName=".librarian.LibrarianHomepage" />

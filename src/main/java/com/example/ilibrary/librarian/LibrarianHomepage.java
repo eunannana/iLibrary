@@ -48,16 +48,16 @@ public class LibrarianHomepage extends AppCompatActivity {
         manageBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addBook = new Intent(getApplicationContext(), ManageBook.class);
-                startActivity(addBook);
+                Intent manageBook = new Intent(getApplicationContext(), BookList.class);
+                startActivity(manageBook);
             }
         });
 
         imageBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addBook = new Intent(getApplicationContext(), ManageBook.class);
-                startActivity(addBook);
+                Intent manageBook = new Intent(getApplicationContext(), BookList.class);
+                startActivity(manageBook);
             }
         });
 

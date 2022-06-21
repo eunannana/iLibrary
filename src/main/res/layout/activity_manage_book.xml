@@ -23,28 +23,11 @@
             android:textSize="34sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Add Book Picture"
-            android:textColor="#1A373C"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
-
-            <ImageButton
-                android:id="@+id/imageBook"
-                android:layout_width="157dp"
-                android:layout_height="145dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:boxBackgroundMode="outline"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -133,8 +116,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Subject Book"
-                android:inputType="number"
-                android:textColor="#0B4E61"/>
+                android:inputType="textPersonName"
+                android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -311,12 +294,12 @@
             app:boxBackgroundMode="outline"/>
 
         <Button
-            android:id="@+id/save_book"
+            android:id="@+id/save_book_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#0B4E61"
-            android:text="SAVE"
+            android:text="SAVE BOOK"
             android:textColor="#B1CFD1" />
 
     </LinearLayout>

@@ -16,6 +16,7 @@ import com.example.ilibrary.R;
 import com.example.ilibrary.view.MemberViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.example.ilibrary.model.User;
@@ -24,7 +25,7 @@ import java.lang.reflect.Member;
 
 public class MemberList extends AppCompatActivity {
 
-
+    private FloatingActionButton fab_save;
     private RecyclerView recyclerView;
     private DatabaseReference ref;
     RecyclerView.LayoutManager layoutManager;
@@ -34,20 +35,16 @@ public class MemberList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_list);
 
-
+        fab_save = findViewById(R.id.save_member);
         ref = FirebaseDatabase.getInstance().getReference().child("User").child("Member");
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-//        addmember.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MemberList.this, ManageMember.class);
-//                startActivity(intent);
-//         }
-//        });
+        fab_save.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), ManageMember.class));
+        });
     }
     @Override
     protected void onStart(){

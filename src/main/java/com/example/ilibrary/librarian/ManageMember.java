@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ilibrary.R;
-import com.example.ilibrary.member.member_login;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -39,7 +38,7 @@ public class ManageMember extends AppCompatActivity {
         address_member = findViewById(R.id.addressMember);
         phone_member = findViewById(R.id.phoneMember);
         email_member = findViewById(R.id.emailMember);
-        save_button = findViewById(R.id.save_book);
+        save_button = findViewById(R.id.save_member);
 
         progressDialog = new ProgressDialog(ManageMember.this);
         progressDialog.setTitle("On process");
@@ -112,7 +111,7 @@ public class ManageMember extends AppCompatActivity {
                         progressDialog.dismiss();
                         Toast.makeText(ManageMember.this, "Input a new ID", Toast.LENGTH_SHORT).show();
 
-                        Intent i = new Intent(ManageMember.this, ManageMember.class);
+                        Intent i = new Intent(ManageMember.this, MemberList.class);
                         startActivity(i);
                     }
                 }

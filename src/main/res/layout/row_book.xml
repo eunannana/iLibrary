@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B1CFD1"
+    android:divider="@color/white"
+    android:showDividers="end"
+    >
+
+    <TextView
+        android:id="@+id/row_ID_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/row_title_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_ISBN_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_subject_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+
+    <TextView
+        android:id="@+id/row_shelf_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_author_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_publisher_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_year_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_stock_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_desc_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/row_summary_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name" />
+
+
+</LinearLayout>
+
