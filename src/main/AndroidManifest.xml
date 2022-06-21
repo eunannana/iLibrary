@@ -9,26 +9,38 @@
         android:roundIcon="@drawable/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
-        <activity android:name=".librarian.MemberList"
-            android:exported="false"/>
+        <activity
+            android:name=".BookReservationList"
+            android:exported="false" />
+        <activity
+            android:name=".MemberBookReservation"
+            android:exported="false" />
+        <activity
+            android:name=".member.MemberViewBook"
+            android:exported="false" />
+        <activity
+            android:name=".librarian.MemberList"
+            android:exported="false"
+            android:parentActivityName=".librarian.LibrarianHomepage" />
         <activity
             android:name=".librarian.BookList"
             android:exported="false"
-            android:parentActivityName=".librarian.LibrarianHomepage"/>
+            android:parentActivityName=".librarian.LibrarianHomepage" />
         <activity
             android:name=".librarian.ManageMember"
             android:exported="false"
-            android:parentActivityName=".librarian.MemberList"/>
+            android:parentActivityName=".librarian.MemberList" />
         <activity
             android:name=".librarian.ManageBook"
             android:exported="false"
-            android:parentActivityName=".librarian.BookList"/>
+            android:parentActivityName=".librarian.BookList" />
         <activity
             android:name=".DetailBook"
             android:parentActivityName=".librarian.LibrarianHomepage" />
         <activity
             android:name=".member.ReservationBook"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".member.MemberViewBook" />
         <activity
             android:name=".member.MemberHomepage"
             android:parentActivityName=".member.member_login" />

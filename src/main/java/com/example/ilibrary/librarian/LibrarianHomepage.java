@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ import com.example.ilibrary.R;
 
 public class LibrarianHomepage extends AppCompatActivity {
 
+    Button signout_librarian;
     TextView manageMember, manageBook, manageReservation;
     ImageView imageMember, imageBook, imageReservation;
 
@@ -20,6 +22,7 @@ public class LibrarianHomepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_librarian_homepage);
 
+        signout_librarian = findViewById(R.id.signout_librarian);
         manageMember = findViewById(R.id.MemberManage);
         manageBook = findViewById(R.id.BookManage);
         manageReservation = findViewById(R.id.ReservationManage);
@@ -27,6 +30,14 @@ public class LibrarianHomepage extends AppCompatActivity {
         imageMember = findViewById(R.id.imgMember);
         imageBook = findViewById(R.id.imgBook);
         imageReservation = findViewById(R.id.imgReservation);
+
+        signout_librarian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signout_librarian = new Intent(getApplicationContext(), librarian_login.class);
+                startActivity(signout_librarian);
+            }
+        });
 
         manageMember.setOnClickListener(new View.OnClickListener()
         {

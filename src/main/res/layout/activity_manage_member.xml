@@ -40,7 +40,7 @@
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/IDmember"
+                android:id="@+id/IDmember_resv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter ID Member"
@@ -70,27 +70,7 @@
                 android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Address"
-            android:textColor="#1A373C"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
-
-            <EditText
-                android:id="@+id/addressMember"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Member Address"
-                android:textColor="#0B4E61" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -114,35 +94,6 @@
                 android:inputType="phone"
                 android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="E-mail"
-            android:textColor="#1A373C"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
-
-            <EditText
-                android:id="@+id/emailMember"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Member E-mail Address"
-                android:inputType="textWebEmailAddress"
-                android:textColor="#0B4E61" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline" />
 
         <Button
             android:id="@+id/save_member_button"

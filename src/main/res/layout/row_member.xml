@@ -3,29 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#B1CFD1"
-    android:divider="@color/white"
-    android:showDividers="end"
-    >
+    android:padding="10dp"
+    android:divider="#1A373C">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member ID"
+        android:textStyle="bold"
+        android:textColor="#1A373C"/>
     <TextView
         android:id="@+id/row_ID_member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ID"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:textColor="#1A373C"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member Name"
+        android:textStyle="bold"
+        android:textColor="#1A373C"/>
 
     <TextView
         android:id="@+id/row_name_member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="ID"
         android:divider="@color/black"
         android:dividerHeight="1dp"
-        android:text="name" />
+        android:textColor="#1A373C" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member Phone"
+        android:textStyle="bold"
+        android:textColor="#1A373C"/>
+
+    <TextView
+        android:id="@+id/row_phone_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:textColor="#1A373C" />
 
 
 </LinearLayout>
-

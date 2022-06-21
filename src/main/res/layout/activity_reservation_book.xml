@@ -40,7 +40,7 @@
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/IDmember"
+                android:id="@+id/IDmember_resv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter ID Member"
@@ -62,12 +62,13 @@
             app:boxBackgroundColor="@color/white"
             app:boxBackgroundMode="outline">
 
-            <EditText
-                android:id="@+id/book_ID_resrvation"
+            <TextView
+                android:id="@+id/IDbook_resv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Book ID"
-                android:textColor="#0B4E61" />
+                android:textColor="#0B4E61"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -84,12 +85,13 @@
             app:boxBackgroundColor="@color/white"
             app:boxBackgroundMode="outline">
 
-            <EditText
-                android:id="@+id/book_title_reservation"
+            <TextView
+                android:id="@+id/titleBook_resv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Book Title"
-                android:textColor="#0B4E61" />
+                android:textColor="#0B4E61"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -107,9 +109,10 @@
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/date_reservation"
+                android:id="@+id/date_resv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Enter Reservation Date"
                 android:inputType="date"
                 android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -129,9 +132,10 @@
             app:boxBackgroundMode="outline">
 
             <EditText
-                android:id="@+id/returnDateReservation"
+                android:id="@+id/date_return"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Enter Return Date"
                 android:inputType="date"
                 android:textColor="#0B4E61" />
         </com.google.android.material.textfield.TextInputLayout>

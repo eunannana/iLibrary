@@ -55,6 +55,7 @@ public class MemberList extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull MemberViewHolder holder, int position, @NonNull User model) {
                 holder.textMemberID.setText(model.getID());
                 holder.textMemberName.setText(model.getName());
+                holder.textMemberPhone.setText(model.getPhone());
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -78,3 +79,4 @@ public class MemberList extends AppCompatActivity {
     }
 
 }
+

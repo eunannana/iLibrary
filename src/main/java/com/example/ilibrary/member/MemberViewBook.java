@@ -1,4 +1,4 @@
-package com.example.ilibrary.librarian;
+package com.example.ilibrary.member;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,9 +14,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-
 import com.example.ilibrary.R;
 import com.example.ilibrary.adapter.BookAdapter;
+import com.example.ilibrary.librarian.BookList;
+import com.example.ilibrary.librarian.ManageBook;
 import com.example.ilibrary.model.book;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,24 +29,21 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookList extends AppCompatActivity {
-
+public class MemberViewBook extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private FloatingActionButton fab_save_book;
     private RecyclerView recyclerView;
     private List<book> list = new ArrayList<>();
     private BookAdapter bookAdapter;
     private ProgressDialog progressDialog;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_list);
-
-        fab_save_book = findViewById(R.id.button_save_book);
+        setContentView(R.layout.activity_member_view_book);
         recyclerView = findViewById(R.id.recycler_view_book);
         recyclerView.setHasFixedSize(true);
-        progressDialog = new ProgressDialog(BookList.this);
+        progressDialog = new ProgressDialog(MemberViewBook.this);
         progressDialog.setTitle("Loading");
         progressDialog.setMessage("Take the Data...");
         bookAdapter = new BookAdapter(getApplicationContext(), list);
@@ -53,41 +51,31 @@ public class BookList extends AppCompatActivity {
         bookAdapter.setDialog(new BookAdapter.Dialog() {
             @Override
             public void onClick(int pos) {
-            final CharSequence[] dialogItem = {"Edit", "Delete"};
-                AlertDialog.Builder dialog = new AlertDialog.Builder(BookList.this);
+                final CharSequence[] dialogItem = {"Make Reservation"};
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MemberViewBook.this);
                 dialog.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (i){
-                            //send data to the next class
                             case 0:
-                                Intent intent = new Intent(getApplicationContext(), ManageBook.class);
-                                intent.putExtra("id", list.get(pos).getBookID());
+                                Intent intent = new Intent(getApplicationContext(), ReservationBook.class);
                                 intent.putExtra("code", list.get(pos).getBookCode());
                                 intent.putExtra("title", list.get(pos).getBookTitle());
-                                intent.putExtra("subject", list.get(pos).getBookSubject());
-                                intent.putExtra("author", list.get(pos).getBookAuthor());
                                 startActivity(intent);
                                 break;
-                            case 1:
-                                // call class delete data
-                                deleteData(list.get(pos).getBookID());
-                                break;
+
                         }
                     }
                 });
                 dialog.show();
             }
         });
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);
         RecyclerView.ItemDecoration decoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(decoration);
         recyclerView.setAdapter(bookAdapter);
-
-        fab_save_book.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), ManageBook.class));
-        });
 
     }
     @Override
@@ -124,22 +112,4 @@ public class BookList extends AppCompatActivity {
                     }
                 });
     }
-    //method to delete data
-    private void deleteData(String id){
-        progressDialog.show();
-        db.collection("book").document(id)
-                .delete()
-                .addOnCompleteListener(new OnCompleteListener<Void>(){
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task){
-                        if(!task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(), "Failed to Delete Data!", Toast.LENGTH_SHORT).show();
-                        }
-                        progressDialog.dismiss();
-
-                        getData();
-                    }
-                });
     }
-}
-
