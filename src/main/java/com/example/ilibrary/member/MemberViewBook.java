@@ -61,6 +61,8 @@ public class MemberViewBook extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), ReservationBook.class);
                                 intent.putExtra("code", list.get(pos).getBookCode());
                                 intent.putExtra("title", list.get(pos).getBookTitle());
+                                intent.putExtra("subject", list.get(pos).getBookSubject());
+                                intent.putExtra("author", list.get(pos).getBookAuthor());
                                 startActivity(intent);
                                 break;
 

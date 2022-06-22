@@ -13,6 +13,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Member ID"
+        android:textStyle="bold"
+        android:textColor="#1A373C"/>
+    <TextView
+        android:id="@+id/memberIDresv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:text="name"
+        android:textColor="#1A373C"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Book Code"
         android:textStyle="bold"
         android:textColor="#1A373C"/>
@@ -43,11 +58,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category"
+        android:text="Reservation Date"
         android:textStyle="bold"
         android:textColor="#1A373C"/>
     <TextView
-        android:id="@+id/subjectBook"
+        android:id="@+id/resvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:divider="@color/black"
@@ -58,12 +73,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AuthorBook Title"
+        android:text="Return Date"
         android:textStyle="bold"
         android:textColor="#1A373C"/>
 
     <TextView
-        android:id="@+id/authorBook"
+        android:id="@+id/returnDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:divider="@color/black"

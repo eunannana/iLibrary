@@ -1,6 +1,7 @@
 package com.example.ilibrary.member;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -8,50 +9,53 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.ilibrary.BookReservationList;
+import com.example.ilibrary.adapter.BookAdapter;
+import com.example.ilibrary.librarian.BookReservationList;
 import com.example.ilibrary.R;
-import com.example.ilibrary.librarian.ManageBook;
+import com.example.ilibrary.model.book;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReservationBook extends AppCompatActivity {
 
-    private EditText member_ID_resv,  book_resv, book_return;
-    private TextView book_ID_resv, book_Title_resv, code_Book, title_Book;
+
+    private TextView code_Book, title_Book, subjectBook, authorBook;
     private Button ReservNow;
-    private ProgressDialog progressDialog;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private String id = "";
+    private RecyclerView recyclerView;
+    private List<book> list = new ArrayList<>();
+    private BookAdapter bookAdapter;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservation_book);
 
-        book_ID_resv = findViewById(R.id.IDbook_resv);
-        book_Title_resv = findViewById(R.id.titleBook_resv);
-        member_ID_resv = findViewById(R.id.IDmember_resv);
-        book_resv = findViewById(R.id.date_resv);
-        book_return = findViewById(R.id.date_return);
+        code_Book = findViewById(R.id.IDbook_resv);
+        title_Book = findViewById(R.id.titleBook_resv);
         ReservNow = findViewById(R.id.reservation_button);
-
+        subjectBook = findViewById(R.id.subjectBook_resv);
+        authorBook = findViewById(R.id.authorBook_resv);
         progressDialog = new ProgressDialog(ReservationBook.this);
         progressDialog.setTitle("On process");
         progressDialog.setMessage("Save Book Reservation...");
 
         Intent intent = getIntent();
         if (intent != null) {
-            id = intent.getStringExtra("id");
             code_Book.setText(intent.getStringExtra("code"));
             title_Book.setText(intent.getStringExtra("title"));
+            subjectBook.setText(intent.getStringExtra("subject"));
+            authorBook.setText(intent.getStringExtra("author"));
 
-            ReservNow.setOnClickListener(v->{
+            ReservNow.setOnClickListener(v-> {
                 startActivity(new Intent(getApplicationContext(), BookReservationList.class));
-                )
+            });
             }
+
         }
 
 }

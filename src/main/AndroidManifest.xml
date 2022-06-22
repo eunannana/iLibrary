@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILibrary">
         <activity
-            android:name=".BookReservationList"
+            android:name=".librarian.BookReservationList"
             android:exported="false" />
         <activity
-            android:name=".MemberBookReservation"
+            android:name=".member.MemberBookReservation"
             android:exported="false" />
         <activity
             android:name=".member.MemberViewBook"
@@ -34,9 +34,6 @@
             android:name=".librarian.ManageBook"
             android:exported="false"
             android:parentActivityName=".librarian.BookList" />
-        <activity
-            android:name=".DetailBook"
-            android:parentActivityName=".librarian.LibrarianHomepage" />
         <activity
             android:name=".member.ReservationBook"
             android:exported="false"
