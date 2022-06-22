@@ -1,33 +1,25 @@
 package com.example.ilibrary.member;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.ilibrary.adapter.BookAdapter;
 import com.example.ilibrary.librarian.BookReservationList;
 import com.example.ilibrary.R;
-import com.example.ilibrary.model.book;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ReservationBook extends AppCompatActivity {
 
-
-    private TextView code_Book, title_Book, subjectBook, authorBook;
+    private EditText memberID_resv, bookCode_resv, bookTitle_resv, date_resv, return_resv;
     private Button ReservNow;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private RecyclerView recyclerView;
-    private List<book> list = new ArrayList<>();
-    private BookAdapter bookAdapter;
     private ProgressDialog progressDialog;
 
     @Override
@@ -35,26 +27,50 @@ public class ReservationBook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservation_book);
 
-        code_Book = findViewById(R.id.IDbook_resv);
-        title_Book = findViewById(R.id.titleBook_resv);
+        memberID_resv = findViewById(R.id.memberIDresv);
+        bookCode_resv = findViewById(R.id.codeBookresv);
+        bookTitle_resv = findViewById(R.id.titleBook_resv);
+        date_resv = findViewById(R.id.resvDate);
+        return_resv = findViewById(R.id.returnDate);
+
         ReservNow = findViewById(R.id.reservation_button);
-        subjectBook = findViewById(R.id.subjectBook_resv);
-        authorBook = findViewById(R.id.authorBook_resv);
+
         progressDialog = new ProgressDialog(ReservationBook.this);
         progressDialog.setTitle("On process");
         progressDialog.setMessage("Save Book Reservation...");
 
-        Intent intent = getIntent();
-        if (intent != null) {
-            code_Book.setText(intent.getStringExtra("code"));
-            title_Book.setText(intent.getStringExtra("title"));
-            subjectBook.setText(intent.getStringExtra("subject"));
-            authorBook.setText(intent.getStringExtra("author"));
-
-            ReservNow.setOnClickListener(v-> {
-                startActivity(new Intent(getApplicationContext(), BookReservationList.class));
+            ReservNow.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    saveReservation();
+                }
             });
-            }
+        }
+        public void saveReservation(){
+        String resvmID = memberID_resv.getText().toString();
+        String resvcode = bookCode_resv.getText().toString();
+        String resvtitle = bookTitle_resv.getText().toString();
+        String dateresv = date_resv.getText().toString();
+        String returnresv = return_resv.getText().toString();
+
+        if(TextUtils.isEmpty(resvmID)) {
+            Toast.makeText(this, "Input member ID", Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(resvcode)) {
+            Toast.makeText(this, "Input book code", Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(resvtitle)) {
+            Toast.makeText(this, "Input book Title", Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(dateresv)) {
+            Toast.makeText(this, "Input reservation date", Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(returnresv)) {
+            Toast.makeText(this, "Input return date", Toast.LENGTH_SHORT).show();
+        }else{
+            progressDialog.setTitle("On Process...");
+            progressDialog.setMessage("Save Data");
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
+        }
+
+
 
         }
 
